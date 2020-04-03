@@ -1,0 +1,53 @@
+div.header {
+	color: white;
+	height: 100px;
+	background-color: black;
+	text-align: center;
+	text-top: 30px;
+	font-size: 30px;
+}
+
+
+div.menu {
+	width: 170px;
+}
+
+div.menu_elem {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+	position: fixed;
+	float: left;
+	width: 170px;
+	background-color: #ccffff;
+}
+
+div.menu_elem a {
+	background-color: #eee; /* Grey background color */
+	color: black; /* Black text color */
+	display: block; /* Make the links appear below each other */
+	padding: 12px; /* Add some padding */
+	text-decoration: none; /* Remove underline from links */
+}
+
+div.menu_elem a:hover {
+	background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+div.menu_elem a.active {
+	background-color: #4CAF50; /* Add a green color to the "active/current" link */
+	color: white;
+}
+
+div.tartalom {
+	margin-left: 300px;
+}
+
+div.image {
+	position: inherit;
+	margin-top: 50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
