@@ -1,4 +1,4 @@
-div.header {
+.header {
 	color: white;
 	height: 100px;
 	background-color: black;
@@ -7,40 +7,46 @@ div.header {
 }
 
 
-div.menu {
-	width: 170px;
+.menu ul{
+	margin:0;
+	padding: 0;
+	display: block;
 }
 
-div.menu_elem {
+.menu li{
 	list-style-type: none;
 	margin: 0;
-    padding: 0;
-	float: left;
+    padding: 10px;
 	width: 170px;
 	background-color: #ccffff;
+	display: block;
+	text-decoration: none;
 }
 
-div.menu_elem a {
+
+.menu li.noactive a {
 	background-color: #eee; /* Grey background color */
 	color: black; /* Black text color */
-	display: block; /* Make the links appear below each other */
-	padding: 12px; /* Add some padding */
+	padding: 0; /* Add some padding */
 	text-decoration: none; /* Remove underline from links */
 }
 
-div.menu_elem a:hover:not(:active) {
+.menu li a:hover{
 	background-color: #ccc; /* Dark grey background on mouse-over */
 }
 
-div.menu_elem a:active {
+.menu li.active a{
 	background-color: #4CAF50; /* Add a green color to the "active/current" link */
 	color: white;
+	padding: 0; /* Add some padding */
+	text-decoration: none; /* Remove underline from links */
 }
 
 div.tartalom {
 	margin-left: 300px;
 	line-height: 20px;
 }
+
 
 
 element.style {
