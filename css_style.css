@@ -1,56 +1,96 @@
-.header {
-	color: white;
-	height: 100px;
-	background-color: black;
-	text-align: center;
-	font-size: 30px;
-}
-
-
-.menu ul{
+header {
+	background-color: Gold;
+	color: dimgrey;
+	height: 200px;
+	font-size: 120px;
 	margin:0;
-	padding: 0;
-	display: block;
+	padding:0;
+	border-bottom-style:solid;
+	border-width:1px;
+	border-color: lightgrey;
 }
 
-.menu li{
-	list-style-type: none;
+.headerleft {
+	margin:0;
+	padding:0;
+	float:left;
+	width:70%;
+	height:100%;
+	line-height:200px;
+	text-align: center;
+	display:table-cell;
+	vertical-align: middle;
+}
+
+
+
+.headerright {
+	margin:0;
+	padding:0;
+	background-color: green;
+	float:left;
+	width:30%;
+	height:100%;
+	text-align:center;
+}
+
+header :after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.menu {
 	margin: 0;
-    padding: 10px;
-	width: 170px;
-	background-color: #ccffff;
+	padding: 0;
+	width: 200px;
+	background-color: white;
+	float: left;
+	height: 100%;
+	overflow: auto;
+	display:block;
+}
+
+
+.menu a.active{
+	background-color: Khaki;
+	color: dimgrey;
+	border-bottom-style:solid;
+	border-width:1px;
+	border-color: lightgrey;
 	display: block;
+	padding: 12px;
+	margin: 0;
 	text-decoration: none;
 }
 
 
-.menu li.noactive a {
-	background-color: #eee; /* Grey background color */
-	color: black; /* Black text color */
-	padding: 0; /* Add some padding */
-	text-decoration: none; /* Remove underline from links */
+.menu a.noactive {
+	background-color: white;
+	display: block;
+	border-bottom-style:solid;
+	border-width:1px;
+	border-color: lightgrey;
+	color: dimgrey;
+	padding: 12px;
+	margin: 0;
+	text-decoration: none;
 }
 
-.menu li a:hover{
-	background-color: #ccc; /* Dark grey background on mouse-over */
+.menu a:hover:not(.active){
+	background-color: lightgrey; 
 }
 
-.menu li.active a{
-	background-color: #4CAF50; /* Add a green color to the "active/current" link */
-	color: white;
-	padding: 0; /* Add some padding */
-	text-decoration: none; /* Remove underline from links */
-}
 
-div.tartalom {
+
+.tartalom {
 	margin-left: 300px;
 	line-height: 20px;
 }
 
 
 
-element.style {
-}
 table, td {
     border: 1px solid black;
 }
