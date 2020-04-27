@@ -11,13 +11,10 @@ header {
 }
 
 .headerleft {
-	margin:0;
-	padding:0;
 	float:left;
 	width:70%;
 	height:100%;
 	line-height:200px;
-	text-align: center;
 	display:table-cell;
 	vertical-align: middle;
 }
@@ -25,8 +22,6 @@ header {
 
 
 .headerright {
-	margin:0;
-	padding:0;
 	background-color: green;
 	float:left;
 	width:30%;
@@ -41,54 +36,112 @@ header :after {
 }
 
 
-.menu {
-	margin: 0;
+nav {
+	background-color:black;
+	margin-top: 10px;
 	padding: 0;
-	width: 200px;
-	background-color: white;
-	float: left;
+	height: 40px;
+	width:100%;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+nav a {
+	border-right-style:solid;
+	border-width:1px;
+	border-color: white;
+	display: block;
+	padding: 10px;
+	margin: 0;
+	width:60px;
+	line-height:20px;
+	text-decoration: none;
+	float:left;
+	text-align:center;
+}
+
+nav a.active{
+	color: white;
+	padding: 10px;
+	margin: 0;
+	text-decoration: none;
+}
+
+
+nav a.noactive {
+	color: grey;
+	padding: 10px;
+	margin: 0;
+	text-decoration: none;
+}
+
+nav a:hover{
+	background-color: darkgray; 
+}
+
+nav :after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.sidenav {
+	background-color:black;
+	margin-top: 10px;
+	padding: 0;
 	height: 100%;
-	overflow: auto;
-	display:block;
+	width:200px;
+	font-weight: bold;
+	font-size: 20px;
+	float: left;
 }
 
-
-.menu a.active{
-	background-color: Khaki;
-	color: dimgrey;
+.sidenav a {
 	border-bottom-style:solid;
 	border-width:1px;
-	border-color: lightgrey;
+	border-color: white;
 	display: block;
-	padding: 12px;
+	padding: 10px;
+	margin: 0;
+	line-height:20px;
+	text-decoration: none;
+	text-align:center;
+}
+
+.sidenav a.active{
+	color: white;
+	padding: 10px;
 	margin: 0;
 	text-decoration: none;
 }
 
 
-.menu a.noactive {
-	background-color: white;
-	display: block;
-	border-bottom-style:solid;
-	border-width:1px;
-	border-color: lightgrey;
-	color: dimgrey;
-	padding: 12px;
+.sidenav a.noactive {
+	color: grey;
+	padding: 10px;
 	margin: 0;
 	text-decoration: none;
 }
 
-.menu a:hover:not(.active){
-	background-color: lightgrey; 
+.sidenav a:hover{
+	background-color: darkgray; 
 }
 
 
 
 .tartalom {
-	margin-left: 300px;
 	line-height: 20px;
+	padding-left: 300px;
+	float:left;
 }
 
+
+.tartalom :after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 table, td {
