@@ -9,13 +9,13 @@ Majd később rendezem/rendezzük ezt.</span></p>
 
 <p>Mivel a html kód megjelenitésekor a böngésző figyelmen kivül hagyja az üres helyeket, felmerül a kérdés, hogy hogyan ir ki az ember kódot weblapra kinlódás nélkül.</p>
 
-<p>Előszór is a egy halom karakter foglalt a html kód számára, mint a kacsacsőrök, idézójelek, stb... ezek megjelenitéséhez kódot kell használni.<br>
-Ha ráguglizol azonnal megtalálod a kódokat, de a leggyakoribbak: '&lt;' = &amp;lt; (less than), '&gt;' = &amp;gt; (greater than), '&quot;' = &amp;quot;.<br>
+<p>Előszór is a egy halom karakter foglalt a html kód számára, mint a kacsacsőrök, idézójelek, stb... ezek megjelenitéséhez kódot kell használni.
+Ha ráguglizol azonnal megtalálod a kódokat, de a leggyakoribbak: '&lt;' = &amp;lt; (less than), '&gt;' = &amp;gt; (greater than), '&quot;' = &amp;quot;.
 Betűkód helyett számkóddal is meg lehet ezeket adni, pl '&lt;' = &amp;#60; stb...</p>
 
-<p>Másodszor, ahhoz, hogy a kód normálisan nézzen ki, nem árt behúzásokat használni stb. Ezt űgy a legkönnyebb elérni, hogy a kódot a &lt;pre&gt; páros cimkével látjuk el.<br>
-Ez azt mondja a böngészőnek, hogy ez a szövegrész előre formázott (pre-formatted), úgyhogy megtartja a szóközöket, sortöréseket, tabokat benne.<br>
-Ezen kivül még a &lt;code&gt; páros cimkét is használtam, ami lehetőséget ad további formázásra (pl hogy saját karaktertipust adjak meg a kódnak, stb...).<br>
+<p>Másodszor, ahhoz, hogy a kód normálisan nézzen ki, nem árt behúzásokat használni stb. Ezt űgy a legkönnyebb elérni, hogy a kódot a &lt;pre&gt; páros cimkével látjuk el.
+Ez azt mondja a böngészőnek, hogy ez a szövegrész előre formázott (pre-formatted), úgyhogy megtartja a szóközöket, sortöréseket, tabokat benne.
+Ezen kivül még a &lt;code&gt; páros cimkét is használtam, ami lehetőséget ad további formázásra (pl hogy saját karaktertipust adjak meg a kódnak, stb...).
 Amúgy lehet, hogy simán a pre cimkének adhatunk code class-t és úgy is működne a dolog - majd kipróbálhatjuk.</p>
 
 <p>Végül PHP-val azt is el tudjuk érni, hogy ne kelljen kézzel beirkálni a spec karaktereket, hanem automatikusan átkonvertáltatjuk őket a géppel:
@@ -28,7 +28,7 @@ EOD;
   echo($str);
 ?&gt;
 </code></pre>
- Ez lényegében annyit csinál, hogy a megjelenitendő kódot hozzárendeli egy változóhoz, és bepasszolja azt egy függvénybe ami megcsinálja a konvertálást.<br>
+ Ez lényegében annyit csinál, hogy a megjelenitendő kódot hozzárendeli egy változóhoz, és bepasszolja azt egy függvénybe ami megcsinálja a konvertálást.
  Egy dolgot aztán visszakonvertál, a 'hellpip'-et, ami a három pont (...). Nem tudom miért, de most le is szarom.
 </p>
 
@@ -58,7 +58,7 @@ A kijelölő megmondja, hogy a html fájl mely tag-jeit formázzuk épp, a tulaj
 	</li>
 	<li>Csoportos kijelölés (group of selectors): Egyszerre több elemet is kijelölhetek, vesszővel elválasztva a kijelölüket. Pl
 	<pre><code>h1, h2 { ... }</code></pre> 
-	kijelöl minden h1 és h2 elemet a weblapon.<br>
+	kijelöl minden h1 és h2 elemet a weblapon.
 	Ezzel óvatosnak kell lenni, mert ha a csoporton belül 1 kijelölő érvénytelen, akkor az egész kijelölés figyelmen kivül lesz hagyva.
 	</li>
 	<li>Azonositó kijelölő (ID selector): az 'id'-vel ellátott tag-eket tudod kijelölni. Az id egyedi kell legyen a weblapon. Pl
@@ -71,14 +71,14 @@ A kijelölő megmondja, hogy a html fájl mely tag-jeit formázzuk épp, a tulaj
 	</li>
 	<li>Oszt'j kijelölők (class selector): az összes adott tipusú, és adott osztályba sorolt elemet kijelöli. Pl
 	<pre><code>p.fos { ... }</code></pre>
-	kijelöli az összes olyan p elemet, amit a 'fos' osztályba soroltál.<br>
+	kijelöli az összes olyan p elemet, amit a 'fos' osztályba soroltál.
 	Ha nem adsz meg a pont előtt semmit, akkor az összes adott osztályba sorolt elem kijelölődik, függetlenül attól, hogy milyen tipusú.
 	</li>
 	<li>Ál-osztály kijelölő (pseudo-class selector): ezekkel tudod megadni, hogy hogy nézzenek ki linkek amik főlé viszed a kurzort, stb. Pl
 	<pre><code>a:hover { ... }</code></pre>
-	kijelöli azokat az 'a' (anchor) elemeket, amik felett van az egér-kurzor.<br>
+	kijelöli azokat az 'a' (anchor) elemeket, amik felett van az egér-kurzor.
 	További lehetőségek: <span style="font-family: monospace, monospace;">:link, :visited, :active, :focus, :target, :checked</span>, melyek sorrendben:
-	még meg nem látogatott hivatkozás, meglátogatott hivatkozás, elem amire épp rákattintanak, egy elem fókuszba kerül user-input következtében (ezt nem igazán tudom mi),<br>
+	még meg nem látogatott hivatkozás, meglátogatott hivatkozás, elem amire épp rákattintanak, egy elem fókuszba kerül user-input következtében (ezt nem igazán tudom mi),
 	hivatkozásnál ugrási célpont megjelenitése, űrlapnál bejelölt választógomb vagy jelölőnégyzet.
 	</li>
 	<li>Pszeudo-elemek (preudo elements): blokkszintű elemek első sorai/betűi:
@@ -104,7 +104,7 @@ A kijelölő megmondja, hogy a html fájl mely tag-jeit formázzuk épp, a tulaj
 	<pre><code>div.szar > p:nth-child(2n+1) { ... }</code></pre>
 	kijelöli az összes 'szar' osztályba tartozó div elem páratlanadik p gyerekeit. A
 	<pre><code>div.szar > h2+p { ... }</code></pre>
-	kijelöli az összes 'szar' osztályba tartozó div elem olyan p gyerekeit, amik egy h2 elem után vannak.<br>
+	kijelöli az összes 'szar' osztályba tartozó div elem olyan p gyerekeit, amik egy h2 elem után vannak.
 	Szerintem ennyi példa elég is, a lényeg hogy nagyon flexibilisen lehet elemeket kijelölni. A könyvben van több példa.
 	</li>
 </ul>
@@ -112,13 +112,13 @@ A kijelölő megmondja, hogy a html fájl mely tag-jeit formázzuk épp, a tulaj
 
 <h2>CSS hierarchia</h2>
 
-<p>A CSS azt röviditi, hogy 'cascading stzle sheet'. A cascading kb azt jelenti, hogy rangsorolt, lépcsőzetes. Ez arra utal, hogy egy elem formázása mi alapján dől el.<br>
+<p>A CSS azt röviditi, hogy 'cascading stzle sheet'. A cascading kb azt jelenti, hogy rangsorolt, lépcsőzetes. Ez arra utal, hogy egy elem formázása mi alapján dől el.
 A szabály egyszerű: az általános felől megyünk a specifikus felé. Azaz, alapértelmezett &rarr; külső stilusok &rarr; head-be ágyazott stilusok &rarr; szövegközi stilusok.</p>
 
-<p>A másik szint ami mentén megy a formázás az pedig az öröklés. Ez annyit tesz, hogy egy elem összes leszáarmazottja megkapja az (értelmes) stilusjegyeket a szölőtől,<br>
+<p>A másik szint ami mentén megy a formázás az pedig az öröklés. Ez annyit tesz, hogy egy elem összes leszáarmazottja megkapja az (értelmes) stilusjegyeket a szölőtől,
 hacsak a leszáarmazottnál nincs más megadva. Pl ha a html body-jára megadsz egy betűtipust, akkor az összes body-ban levő elem megkapja azt (de az egyes elemekben persze át tudod irni).</p>
 
-<h2>Néhány CSS meghatározás:</h2><br>
+<h2>Néhány CSS meghatározás:</h2>
 	<table>
 		<tbody>	<tr><td>Szín</td><td><span>color: red;</span> vagy <span>color: #ff00ff;</span></td></tr>
 				<tr><td>Háttérszín</td><td><span>background: blue;</span> vagy <span>background: #00ff00;</span></td></tr>
