@@ -54,7 +54,7 @@ nav a {
 	padding: 10px;
 	margin: 0;
 	width:60px;
-	line-height:20px;
+	line-height: 20px;
 	text-decoration: none;
 	float:left;
 	text-align:center;
@@ -79,22 +79,17 @@ nav a:hover{
 	background-color: darkgray; 
 }
 
-nav :after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 
 .sidenav {
 	background-color:black;
 	margin-top: 10px;
 	padding: 0;
-	height: 100%;
 	width:200px;
 	font-weight: bold;
 	font-size: 20px;
-	float: left;
+	float:left;
+	clear:left;
 }
 
 .sidenav a {
@@ -106,7 +101,6 @@ nav :after {
 	margin: 0;
 	line-height:20px;
 	text-decoration: none;
-	text-align:center;
 }
 
 .sidenav a.active{
@@ -131,23 +125,19 @@ nav :after {
 
 
 .tartalom {
+	text-align:justify;
 	line-height: 20px;
-	padding-left: 300px;
+	padding-left: 50px;
+	width: 50%;
 	float:left;
 }
 
 
-.tartalom :after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-table, td {
+table.table td {
     border: 1px solid black;
 }
-table {
+table.table {
+	border: 1px solid black;
     display: table;
     border-collapse: separate;
     white-space: normal;
@@ -169,4 +159,37 @@ div.image {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+}
+
+
+table.code_style {
+	margin-left:auto; 
+    margin-right:auto;
+	border: 1px solid grey;
+	background-color:lightgrey;
+	font-size:20px;
+	font-weight:bold;
+	font-style:italic;
+	
+}
+
+table.code_style {
+	background-color:lightgrey;
+	font-size:20px;
+	font-weight:bold;
+	font-style:italic;
+	
+}
+
+
+.bold_italic{
+	font-weight:bold;
+	font-style:italic;
+}
+
+.comment {
+	font-size:16px;
+	font-weight:normal;
+	font-style:italic;
+	color:green;
 }

@@ -27,7 +27,7 @@
 		}<br><br><br><br>
 	</span>
 <h2 style="font-size:50;">Basic CSS syntax:</h2><br>
-	<table>
+	<table class="table">
 		<tbody>	<tr><td>Szín</td><td><span>color: red;</span> vagy <span>color: #ff00ff;</span></td></tr>
 				<tr><td>Háttérszín</td><td><span>background: blue;</span> vagy <span>background: #00ff00;</span></td></tr>
 				<tr><td>Háttérkép</td><td><span>background-image: url('kepfajl.png');</span></td></tr>
