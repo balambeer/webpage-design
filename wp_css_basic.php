@@ -1,10 +1,5 @@
 <h1>A CSS nyelvtana</h1>
 
-<p>kakukk</p>
-
-<p><span style="color:red">Megj: Manuálisan kell sortüréseket hozzáadnom a szöveghez, különben a tartalom becsúszik a sidenav alá.
-Majd később rendezem/rendezzük ezt.</span></p>
-
 <h2>Rövid kitérő: kód megjelenitése weblapon</h2>
 
 <p>Mivel a html kód megjelenitésekor a böngésző figyelmen kivül hagyja az üres helyeket, felmerül a kérdés, hogy hogyan ir ki az ember kódot weblapra kinlódás nélkül.</p>
@@ -117,6 +112,150 @@ A szabály egyszerű: az általános felől megyünk a specifikus felé. Azaz, a
 
 <p>A másik szint ami mentén megy a formázás az pedig az öröklés. Ez annyit tesz, hogy egy elem összes leszáarmazottja megkapja az (értelmes) stilusjegyeket a szölőtől,
 hacsak a leszáarmazottnál nincs más megadva. Pl ha a html body-jára megadsz egy betűtipust, akkor az összes body-ban levő elem megkapja azt (de az egyes elemekben persze át tudod irni).</p>
+
+<h2>A weblap rendezési elve</h2>
+
+<h3>Alapértelmezett elrendezés</h3>
+
+<p>Alapbvetően 2 fajta elem lehet egy weblapon: blokk és inline. Az inline elemek gyakorlatilag úgy viselkednek, mint a karakterek, szóval azzal most nem foglalkozunk.
+Csak annyit jegyzek meg, hogy minden egy doboz-modell alapján van felépitve, igy az inline elemek is kvázi hasonlóan épülnek fel, mint a nagyobb struktúrák, amikről itt szó lesz.</p>
+
+<p>A lenti példák mindegyike 'div' elemekből épül fel. Egy 'example' osztályú befogalaló elem van egy szegéllyel, amibe szines hátterű 'div'-ek vannak bedobálva.
+Ezen kivül semmilyen tulajdonság nincs megadva nekik, kivéve amit a példa szövege ir.</p>
+
+<div class="example">
+	<div class="ex11">Egy</div>
+	<div class="ex12">Kettő</div>
+	<div class="ex13">Három<br>Ide irok még egy sort</div>
+</div>
+
+<p>A dobozoknak persze meg tudsz aldni fix magasságot és szélességet 'px'-ben, valamint százalékban (a befoglaló bodoz méretének százalékában).
+Margin-al és padding-el tudod igazitani a helykihagyást az elemek között, illetve a dobozon belül a tartalom elhelyezését. Ezekröl ennél többet nem is kell tudni szerintem.</p>
+
+<h3>Úsztatás</h3>
+
+<p>Az alapértelmezett 'egymás alá' elrendezést az úsztatás paranccsal lehet megváltoztatni 'egymás mellé'-re.
+Ezt a 'float:left' és 'float:right' parancsok csinálják, és a 'clear:left' és 'clear:right' parancsok szűntetik meg (a 'clear:both' az mindkettő egyben).
+A float parancs hatására az elem 'block' elemmé válik (tehát inline elemből nem kell külön blokkot csinálni ha úsztatod).</p>
+
+<p>A könyv azt irja, hogy ha úsztatsz egy elemet, akkor az azt követő elemek is úszni fognak. Na én ezt nem igy tapasztalom.
+Az alábbi példában a 2. elem kapott egy 'float:left'-et, a többi semmit.
+A baltra úsztatás azt eredményezte, hogy a 2. doboznak már szélessége is a tartalomhoz igazodik.</p>
+
+<div class="example">
+	<div class="ex21">Egy</div>
+	<div class="ex22">Kettő</div>
+	<div class="ex23">Három</div>
+	<div class="ex24">Négy</div>
+	<div class="ex25">Öt</div>
+</div>
+
+<p>Ha a 2. és 3. elemnek adok 'float:left'-et, a többinek semmit, akkor igz fog kinézni az elrendezés:</p>
+
+<div class="example">
+	<div class="ex31">Egy</div>
+	<div class="ex32">Kettő</div>
+	<div class="ex33">Három</div>
+	<div class="ex34">Négy</div>
+	<div class="ex35">Öt</div>
+</div>
+
+<p>Sőt, úgy tűnik, hoy a float nem is öröklődik. Az alábbi példában pedig a 3. és 4. elem a 2. elem gyereke. A 2. kap egy 'float:left'-et.
+Érdekes módon, a befoglaló dobozból kinyólik lefelé a 4. doboz. Olyan hangulata van a dolognak, mintha nem látná, hogy a 2. elemen belülre majd 2 dobozt kell rakni egymás alá.
+Ez engem kurvára meglep...</p>
+
+<div class="example">
+	<div class="ex41">Egy</div>
+	<div class="ex42">
+		<div class="ex43">Három</div>
+		<div class="ex44">Négy</div>
+	</div>
+	<div class="ex45">Öt</div>
+</div>
+
+<p>Ha már ez itt felmerült, akkor megjegyzem, hogy a túlnyúlás kezelése az 'overflow' tulajdonsággal megy.</p>
+
+<p>Ha adok az 5.-nek egy 'clear:left'-et, akkor meg igy néz ki a dolog:</p>
+
+<div class="example">
+	<div class="ex51">Egy</div>
+	<div class="ex52">
+		<div class="ex53">Három</div>
+		<div class="ex54">Négy</div>
+	</div>
+	<div class="ex55">Öt</div>
+</div>
+
+<h4>Úsztatás és tartalom</h4>
+
+<p>Viszont simán balra úsztatgatni nem feltétlen a legjobb ötlet, ugyanis a tartalomtól függően érdekes elrendezéseket kaphatunk.
+Ha a 2. blokkba irok még egy sort, és a CSS változatlan, akkor a 4. elem a 3. után balra jön, de nincs kihúzva balra a 2. elem alá.</p>
+
+<div class="example">
+	<div class="ex21">Egy</div>
+	<div class="ex22">Kettő<br>Ide irok még egy sort.</div>
+	<div class="ex23">Három</div>
+	<div class="ex24">Négy</div>
+	<div class="ex25">Öt</div>
+</div>
+
+<p>Ha a még a 4. blokkot is két sorosra csinálom, akkor a 4. blokk egészen érdekes alakot ölt (a CSS továbbra is változatlan).</p>
+
+<div class="example">
+	<div class="ex21">Egy</div>
+	<div class="ex22">Kettő<br>Ide irok még egy sort.</div>
+	<div class="ex23">Három</div>
+	<div class="ex24">Négy<br>Ide is irok még egy sort.</div>
+	<div class="ex25">Öt</div>
+</div>
+
+<p>Magyarul, ha értelmesen kinéző balra úsztatott szekciót akarok, akkor a legjobb ha azt csinálom, hogy egy befoglaló konténert adok a balra úsztatandó elemeknek, ami egy sort alakit ki.
+Szóval pl a 2. elem lesz a befoglaló konténer, ez nem kap semmit. A 3. és a 4. elem lesz a konténeren belül, a 3. kap egy 'float:left'-et.</p>
+
+<div class="example">
+	<div class="ex71">Egy</div>
+	<div class="ex72">
+		<div class="ex73">Három</div>
+		<div class="ex74">Négy</div>
+	</div>
+	<div class="ex75">Öt</div>
+</div>
+
+<p>Hasonló elrendezéseket még a flexbox-al lehet elérni. A flexbox egy konténer, ami a benne levő elemeket rugalmasan rendezi.
+Meg lehet benne adni az elrendezés irányát a 'flex-direciton' tulajdonsággal (row, column, row-reverse, column-reverse), az elemek közti helyet a pedig 'justify-content' tulajdonsággal tudod állitani.
+Pl egy vizszintes menüt jelképez a 2. konténer, benne a 3. és a 4. pedig egy-egy gombot. Annyi a dolgom, hogy a 2. kap egy 'display:flex; justify-content:space-around;'-t.</p>
+
+<div class="example">
+	<div class="ex61">Egy</div>
+	<div class="ex62">
+		<div class="ex63">Három</div>
+		<div class="ex64">Négy</div>
+	</div>
+	<div class="ex65">Öt</div>
+</div>
+
+<h3>Dobozok viszonyitott pozicionálása</h3>
+
+<p>Vélgül, a dobozok pozicionálása megadható a 'position' tulajdonsággal is, egy másik elemhez képest.
+Ez úgy néz ki, hogy a position tulajdonságnál megadjuk a viszonyitási pontot, amihez képest akarjuk annak a helyzetét definiálni. Lehetséges értékei:
+<ul>
+<li>Static: ez az alapértelmezett, ez konkrétan nem csinál semmit,</li>
+<li>Relative: az alapértelezett helye a viszonyitási pont,</li>
+<li>Absolute: az elemet tároló tömb helye a viszonyitási pont,</li>
+<li>Fixed: a képernyő a viszonyitási pont.</li>
+</ul>
+Ezt követően pedig a 'top, bottom, left, right' tulajdonságokkal, 'px'-ben megadjuk az eltolás mértékét.
+Erre nem is adok példát, annyira adja magát - próbálgasd :)</p>
+
+<p>Ha egymás tetejére tolunk elemeket, akkor a 'z-index' tulajdonsággal adhatunk meg, hogy melyik elemek legyenek felül ill. alul.</p>
+
+<h3>A megjelenités módja</h3>
+
+<p>A 'display' tulajdonsággal meg tudod adni hogy az adott elemet blokk-ként vagy inline elemként akarod kezelni. Emlékezz, úsztatott elemekből automatikusan blokkot csinál a böngésző.
+Emellett megadható a 'none' érték is, ekkor az adott elem teljesen eltűnik (azaz nem csak üres hely lesz, hanem konkrétan mintha egyáltalán nem létezne.
+Ha olyat akarsz, hogy a helye megmaradjon, azt a 'visibility:hidden' csinálja.</p>
+
+
 
 <h2>Néhány CSS meghatározás:</h2>
 	<table>

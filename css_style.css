@@ -193,3 +193,150 @@ table.code_style {
 	font-style:italic;
 	color:green;
 }
+
+
+div.example {
+	border:2px solid black;
+}
+
+div.example > div.ex11 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex12 {
+	background-color:#3c8061;
+}
+
+div.example > div.ex13 {
+	background-color:#475c8d;
+}
+
+div.example > div.ex21 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex22 {
+	background-color:#3c8061;
+	float:left;
+}
+
+div.example > div.ex23 {
+	background-color:#475c8d;
+}
+
+div.example > div.ex24 {
+	background-color:#dac561;
+}
+
+div.example > div.ex25 {
+	background-color:#96a1ba;
+}
+
+div.example > div.ex31 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex32 {
+	background-color:#3c8061;
+	float:left;
+}
+
+div.example > div.ex33 {
+	background-color:#475c8d;
+	float:left;
+}
+
+div.example > div.ex34 {
+	background-color:#dac561;
+}
+
+div.example > div.ex35 {
+	background-color:#96a1ba;
+}
+
+div.example > div.ex41 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex42 {
+	background-color:#3c8061;
+	float:left;
+}
+
+div.example div.ex43 {
+	background-color:#475c8d;
+}
+
+div.example div.ex44 {
+	background-color:#dac561;
+}
+
+div.example > div.ex45 {
+	background-color:#96a1ba;
+}
+
+div.example > div.ex51 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex52 {
+	background-color:#3c8061;
+	float:left;
+}
+
+div.example div.ex53 {
+	background-color:#475c8d;
+}
+
+div.example div.ex54 {
+	background-color:#dac561;
+}
+
+div.example > div.ex55 {
+	background-color:#96a1ba;
+	clear:left;
+}
+
+div.example > div.ex61 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex62 {
+	background-color:#3c8061;
+	display:flex;
+	justify-content:space-around;
+}
+
+div.example div.ex63 {
+	background-color:#475c8d;
+}
+
+div.example div.ex64 {
+	background-color:#dac561;
+}
+
+div.example > div.ex65 {
+	background-color:#96a1ba;
+	clear:left;
+}
+
+div.example > div.ex71 {
+	background-color:#dc4444;
+}
+
+div.example > div.ex72 {
+	background-color:#3c8061;
+}
+
+div.example div.ex73 {
+	background-color:#475c8d;
+	float:left;
+}
+
+div.example div.ex74 {
+	background-color:#dac561;
+}
+
+div.example > div.ex75 {
+	background-color:#96a1ba;
+}
