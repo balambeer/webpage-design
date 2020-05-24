@@ -243,6 +243,7 @@ Ez úgy néz ki, hogy a position tulajdonságnál megadjuk a viszonyitási ponto
 <li>Relative: az alapértelezett helye a viszonyitási pont,</li>
 <li>Absolute: az elemet tároló tömb helye a viszonyitási pont,</li>
 <li>Fixed: a képernyő a viszonyitási pont.</li>
+<li>Sticky: a relative és a fixed között váltogat. Alapból relative, de amikor a görgetés miatt lekerülne a képernyőről, akkor fixed-re vált. Pl: 'position: sticky; top: 0;' a képernyő tetejéhez ragasztja a cuccot ha legörgetsz. Fontos: a sticky elem csak az őt tartalmazó konténeren belül tud mozogni! Továbbá, a sticky elem alácsúszhat az alatta levő elemeknek, úh lehet hogy egy 'z-index'-el kell kombinálni.</li>
 </ul>
 Ezt követően pedig a 'top, bottom, left, right' tulajdonságokkal, 'px'-ben megadjuk az eltolás mértékét.
 Erre nem is adok példát, annyira adja magát - próbálgasd :)</p>
