@@ -14,7 +14,7 @@ Ezen kivül még a &lt;code&gt; páros cimkét is használtam, ami lehetőséget
 Amúgy lehet, hogy simán a pre cimkének adhatunk code class-t és úgy is működne a dolog - majd kipróbálhatjuk.</p>
 
 <p>Végül PHP-val azt is el tudjuk érni, hogy ne kelljen kézzel beirkálni a spec karaktereket, hanem automatikusan átkonvertáltatjuk őket a géppel:
-<pre><code>
+<pre>
 &lt;? $str = &lt;&lt;&lt;'EOD'
   *write code here*
 EOD;
@@ -22,7 +22,7 @@ EOD;
   $str = str_replace("&amp;amp;hellip;", "&amp;hellip;", $str);
   echo($str);
 ?&gt;
-</code></pre>
+</pre>
  Ez lényegében annyit csinál, hogy a megjelenitendő kódot hozzárendeli egy változóhoz, és bepasszolja azt egy függvénybe ami megcsinálja a konvertálást.
  Egy dolgot aztán visszakonvertál, a 'hellpip'-et, ami a három pont (...). Nem tudom miért, de most le is szarom.
 </p>
